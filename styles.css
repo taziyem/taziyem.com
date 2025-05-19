@@ -1,0 +1,143 @@
+/* Reset ve temel ayarlar */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+body {
+  background: #f9f9f9;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto 80px auto;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+header h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #444;
+}
+header p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Hizmetler */
+section.services {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+section.services div.service {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+  text-align: center;
+}
+section.services div.service h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #222;
+}
+section.services div.service p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Hakkımızda */
+section.about {
+  margin-top: 50px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgb(0 0 0 / 0.1);
+}
+section.about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #444;
+  font-size: 2rem;
+}
+section.about p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* İletişim ve Footer */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #222;
+  
+  font-size: 1.1rem;
+  position: relative;
+}
+footer p {
+  margin-bottom: 5px;
+  color: #fff; /* Beyaz yapıldı */
+}
+
+/* WhatsApp Butonu */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+.whatsapp-btn:hover {
+  background-color: #1ebe57;
+}
+.whatsapp-btn svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
+
+/* Mobil düzen */
+@media (max-width: 600px) {
+  section.services {
+    grid-template-columns: 1fr;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  section.about h2 {
+    font-size: 1.7rem;
+  }
+}
