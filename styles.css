@@ -55,12 +55,19 @@ section.services div.service {
   border-radius: 10px;
   box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
   text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 section.services div.service h3 {
   margin-bottom: 15px;
   font-size: 1.3rem;
   color: #222;
 }
+
+section.services div.service:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 section.services div.service p {
   font-size: 1rem;
   color: #555;
