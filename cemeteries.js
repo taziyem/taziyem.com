@@ -1,7 +1,6 @@
-import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = 'https://klggihcndyvbzjpuxtas.supabase.co'; 
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtsZ2dpaGNuZHl2YnpqcHV4dGFzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3NTkxODMsImV4cCI6MjA2MzMzNTE4M30.ILyBXIi2J7Z8mON-H6Isqh2ObGe5SCQjoxX80cQBjHo';
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 document.addEventListener('DOMContentLoaded', async function () {
 
@@ -18,12 +17,14 @@ document.addEventListener('DOMContentLoaded', async function () {
     dataContainer.innerHTML = '';
 
     data.forEach(post => {
-        const postElement = document.createElement('div');
-        postElement.classList.add('post');
-        postElement.innerHTML = `
-            <h3>${post.title}</h3>
-            <p>${post.body}</p>
+        const row = document.createElement('tr'); // Yeni bir satır oluştur
+
+        row.innerHTML = `
+            <td>${post.name}</td>
+            <td>${post.city}</td>
+            <td>${post.address}</td>
         `;
-        dataContainer.appendChild(postElement);
+
+        dataContainer.appendChild(row); // Satırı tabloya ekle
     });
 });
